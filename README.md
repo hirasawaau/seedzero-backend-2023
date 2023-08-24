@@ -1,4 +1,4 @@
-# Seedzero Backend 2023
+# SeedZero Backend 2023
 
 ## Prerequisites
 
@@ -9,7 +9,8 @@
   - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 - MongoDB (Mostly recommended to use Docker)
   - [MongoDB Docker Image](https://hub.docker.com/_/mongo)
-  - [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community/)
+    - Download with run ```docker pull mongo``` in Terminall/Shell
+  - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ## Try FastAPI
 
@@ -27,9 +28,9 @@ $ pip install "fastapi[all]"
 python3 -m pip install "fastapi[all]"
 ```
 
-### Coding API that response "Hello World"
+### Example Coding API that response "Hello World"
 
-#### main.py
+#### 1. Create main.py
 
 ```python
 from fastapi import FastAPI
@@ -41,7 +42,7 @@ def hello_world():
   return "Hello World"
 ```
 
-### Run FastAPI
+### 2. Use uvicorn run FastAPI with this command in terminal/shell
 
 #### macOS/Linux
 
@@ -54,9 +55,8 @@ $ uvicorn main:app --reload
 ```powershell
 python3 -m uvicorn main:app --reload
 ```
-
+#### Example output of uvicorn when start complete 
 ![Alt text](img/image.png)
-
-<p align="center"><i>Example output of uvicorn when start complete</i></p>
+>
 
 If you see the output like this, you can access to [http://localhost:8000/](http://localhost:8000) to see the result.
