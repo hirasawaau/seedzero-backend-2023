@@ -76,3 +76,11 @@ $ uvicorn main:app --reload
 ![Alt text](img/image.png)
 
 If you see the output like this, you can access to [http://localhost:8000/](http://localhost:8000) to see the result.
+
+## Demo
+
+### Breakfast
+
+```bash
+$ uvicorn breakfast:app --reload
+```
