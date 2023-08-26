@@ -9,28 +9,37 @@
   - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 - MongoDB (Mostly recommended to use Docker)
   - [MongoDB Docker Image](https://hub.docker.com/_/mongo)
-    - Download with run ```docker pull mongo``` in Terminall/Shell
+    1. Open Docker Desktop or start Docker Engine
+    2. Run ` docker run -p 27017:27017/tcp mongo` in Terminal or Shell
   - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
-## After Miniconda installion
+## After Miniconda installation
+
 You must run this command in Terminal or Powershell to initialize conda
+
 ### Windows (In Miniconda Command Prompt)
+
 ```powershell
 conda init powershell
 conda init cmd.exe
 ```
+
 ### Mac/Linux (Unix)
+
 ```bash
 $ ~/miniconda3/bin/conda init bash
 $ ~/miniconda3/bin/conda init zsh
 ```
 
 ## Caution
+
 You should create an new environment for this project to avoid conflict with other project.
+
 ```bash
 $ conda create -n seedzero-2023 python=3.11
 $ conda activate seedzero-2023
 ```
+
 ## Try FastAPI
 
 ### Install dependencies
@@ -39,7 +48,6 @@ $ conda activate seedzero-2023
 $ pip install "fastapi[all]"
 $ pip install beanie # Database
 ```
-
 
 ### Example Coding API that response "Hello World"
 
@@ -55,11 +63,16 @@ def hello_world():
   return "Hello World"
 ```
 
-### 2. Use uvicorn run FastAPI with this command in terminal/shell
+Full Example Code in [main.py](main.py)\*\*
+
+### 2. Use uvicorn run FastAPI with this command in terminal or shell
+
 ```bash
 $ uvicorn main:app --reload
 ```
-#### Example output of uvicorn when start complete 
+
+#### Example output of uvicorn when start complete
+
 ![Alt text](img/image.png)
 
 If you see the output like this, you can access to [http://localhost:8000/](http://localhost:8000) to see the result.
